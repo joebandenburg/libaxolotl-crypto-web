@@ -1,0 +1,35 @@
+{
+  "name": "axolotl-crypto",
+  "version": "1.0.0",
+  "authors": [
+    "Joe Bandenburg <joe@bandenburg.com>"
+  ],
+  "description": "WebCrypto implementation of cryptography interface for libaxolotl-javascript",
+  "main": "axolotl-crypto.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "axolotl",
+    "crypto"
+  ],
+  "license": "LGPLv3",
+  "homepage": "https://github.com/joebandenburg/libaxolotl-crypto-web",
+  "dependencies": {
+    "axolotl-crypto-curve25519": "~1.0.0"
+  },
+  "ignore": [
+    "test",
+    ".gitattributes",
+    ".gitignore",
+    ".jscsrc",
+    ".jshintrc",
+    ".npmignore",
+    ".travis.yml",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json"
+  ]
+}

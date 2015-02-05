@@ -1,0 +1,15 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "quotmark": "double",
+    "undef": true,
+    "typed": true,
+    "node": true,
+    "esnext": true,
+    "browser": true,
+    "strict": true,
+    "globals": {
+        "define": true
+    }
+}
