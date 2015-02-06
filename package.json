@@ -4,7 +4,7 @@
   "description": "WebCrypto implementation of cryptography interface for libaxolotl-javascript",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt check"
   },
   "repository": {
     "type": "git",
