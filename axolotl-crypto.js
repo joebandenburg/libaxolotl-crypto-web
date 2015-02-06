@@ -78,9 +78,6 @@
             };
             return window.crypto.subtle.importKey("raw", key, keyOptions, false, ["encrypt"]).then(function(key) {
                 return window.crypto.subtle.encrypt(encryptOptions, key, message);
-            }).then(function(ciphertext) {
-                // Remove extra padding block
-                return ciphertext.slice(0, ciphertext.byteLength - 16);
             });
         },
         decrypt: function(key, ciphertext, iv) {
@@ -91,14 +88,8 @@
                 name: "AES-CBC",
                 iv: new Uint8Array(iv)
             };
-            var paddingIv = ciphertext.slice(ciphertext.byteLength - 16);
-            return crypto.encrypt(key, padding, paddingIv).then(function(paddingBlock) {
-                var ciphertextWithPadding = new Uint8Array(ciphertext.byteLength + 16);
-                ciphertextWithPadding.set(new Uint8Array(ciphertext), 0);
-                ciphertextWithPadding.set(new Uint8Array(paddingBlock.slice(0, 16)), ciphertext.byteLength);
-                return window.crypto.subtle.importKey("raw", key, keyOptions, false, ["decrypt"]).then(function(key) {
-                    return window.crypto.subtle.decrypt(decryptOptions, key, ciphertextWithPadding);
-                });
+            return window.crypto.subtle.importKey("raw", key, keyOptions, false, ["decrypt"]).then(function(key) {
+                return window.crypto.subtle.decrypt(decryptOptions, key, ciphertext);
             });
         }
     };
