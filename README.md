@@ -7,3 +7,5 @@ A WebCrypto implementation of the cryptography interface for [libaxolotl-javascr
 ```
 $ bower install axolotl-crypto
 ```
+
+The module supports AMD, CommonJS and globals.
