@@ -1,6 +1,6 @@
 {
   "name": "axolotl-crypto-web",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "WebCrypto implementation of cryptography interface for libaxolotl-javascript",
   "main": "index.js",
   "scripts": {

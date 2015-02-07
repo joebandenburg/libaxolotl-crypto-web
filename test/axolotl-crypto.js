@@ -190,7 +190,6 @@ describe("axolotl-crypto", function() {
                 0xc0
             ]).buffer;
             return axolotlCrypto.encrypt(key, plaintext, iv).then(function(actual) {
-                console.log(new Uint8Array(actual.slice(16)));
                 assert.ok(areArrayBuffersEqual(expected, actual));
             });
         });
