@@ -18,9 +18,9 @@
 (function (root, factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {
-        define("axolotl-crypto", ["axoltol-crypto-curve25519"], factory);
+        define("axolotl-crypto", ["axolotl-crypto-curve25519"], factory);
     } else if (typeof exports === "object") {
-        module.exports = factory(require("axoltol-crypto-curve25519"));
+        module.exports = factory(require("axolotl-crypto-curve25519"));
     } else {
         root.axolotlCrypto = factory(root.axolotlCryptoCurve25519);
     }
